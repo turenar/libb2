@@ -1,0 +1,1 @@
+option('fat', type: 'boolean', value: false, description: 'build a fat binary on systems that support it')
