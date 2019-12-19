@@ -33,6 +33,7 @@ typedef enum
 #endif
 } cpu_feature_t;
 
+#if 0
 static const char feature_names[][8] =
 {
   "none",
@@ -45,6 +46,7 @@ static const char feature_names[][8] =
   /* "avx2" */
 #endif
 };
+#endif
 
 #if defined(HAVE_X86)
 

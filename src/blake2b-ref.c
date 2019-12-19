@@ -49,11 +49,13 @@ static inline int blake2b_set_lastnode( blake2b_state *S )
   return 0;
 }
 
+#if 0
 static inline int blake2b_clear_lastnode( blake2b_state *S )
 {
   S->f[1] = 0ULL;
   return 0;
 }
+#endif
 
 /* Some helper functions, not necessarily useful */
 static inline int blake2b_set_lastblock( blake2b_state *S )
@@ -64,6 +66,7 @@ static inline int blake2b_set_lastblock( blake2b_state *S )
   return 0;
 }
 
+#if 0
 static inline int blake2b_clear_lastblock( blake2b_state *S )
 {
   if( S->last_node ) blake2b_clear_lastnode( S );
@@ -71,6 +74,7 @@ static inline int blake2b_clear_lastblock( blake2b_state *S )
   S->f[0] = 0ULL;
   return 0;
 }
+#endif
 
 static inline int blake2b_increment_counter( blake2b_state *S, const uint64_t inc )
 {
@@ -80,7 +84,7 @@ static inline int blake2b_increment_counter( blake2b_state *S, const uint64_t in
 }
 
 
-
+#if 0
 // Parameter-related functions
 static inline int blake2b_param_set_digest_length( blake2b_param *P, const uint8_t digest_length )
 {
@@ -135,6 +139,7 @@ static inline int blake2b_param_set_personal( blake2b_param *P, const uint8_t pe
   memcpy( P->personal, personal, BLAKE2B_PERSONALBYTES );
   return 0;
 }
+#endif
 
 static inline int blake2b_init0( blake2b_state *S )
 {
