@@ -30,7 +30,7 @@ if host_machine.endian() == 'little'
 	conf.set('NATIVE_LITTLE_ENDIAN', 1)
 endif
 
-openmp_dep = dependency('openmp')
+openmp_dep = dependency('openmp', required: false)
 
 subdir('src')
 
