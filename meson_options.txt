@@ -1,1 +1,2 @@
 option('fat', type: 'boolean', value: false, description: 'build a fat binary on systems that support it')
+option('openmp', type: 'boolean', value: true, description: 'use openmp')
